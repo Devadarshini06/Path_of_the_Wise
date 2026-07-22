@@ -1,18 +1,27 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Epic Interactive Adventure 🌟</title>
+  <title>Path of the Wise 🌿✨</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Epic Interactive Adventure 🌟</h1>
+    <div class="subtitle">An Interactive Quest of Mind & Courage</div>
+    <h1>Path of the Wise 🌿</h1>
+    
     <div id="story"></div>
     <div id="choices"></div>
     <div id="result"></div>
-    <div id="scoreboard">Score - Cleverness: 0 | Courage: 0 | Humor: 0 | Total: 0</div>
+    
+    <div id="scoreboard">
+      <div class="stat"><span>Cleverness:</span> <strong id="clever-val">0</strong></div>
+      <div class="stat"><span>Courage:</span> <strong id="courage-val">0</strong></div>
+      <div class="stat"><span>Humor:</span> <strong id="humor-val">0</strong></div>
+      <div class="stat total"><span>Total Score:</span> <strong id="total-val">0</strong></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
