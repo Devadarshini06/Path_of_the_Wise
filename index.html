@@ -1,29 +1,172 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Path of the Wise 🌿✨</title>
+
+  <meta
+    name="description"
+    content="Path of the Wise - An interactive quest of mind, courage and humor."
+  >
+
+  <title>Path of the Wise | Interactive Quest</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <div class="container">
-    <div class="subtitle">An Interactive Quest of Mind & Courage</div>
-    <h1>Path of the Wise 🌿</h1>
-    
-    <div id="story"></div>
-    <div id="choices"></div>
-    <div id="result"></div>
-    
-    <div id="scoreboard">
-      <div class="stat"><span>Cleverness:</span> <strong id="clever-val">0</strong></div>
-      <div class="stat"><span>Courage:</span> <strong id="courage-val">0</strong></div>
-      <div class="stat"><span>Humor:</span> <strong id="humor-val">0</strong></div>
-      <div class="stat total"><span>Total Score:</span> <strong id="total-val">0</strong></div>
-    </div>
+
+  <!-- Ambient Background -->
+  <div class="background-effects">
+    <div class="moon"></div>
+    <div class="stars stars-one"></div>
+    <div class="stars stars-two"></div>
+
+    <span class="firefly firefly-1"></span>
+    <span class="firefly firefly-2"></span>
+    <span class="firefly firefly-3"></span>
+    <span class="firefly firefly-4"></span>
+    <span class="firefly firefly-5"></span>
+    <span class="firefly firefly-6"></span>
   </div>
 
+  <main class="game-container">
+
+    <!-- Header -->
+    <header class="game-header">
+
+      <div class="eyebrow">
+        <span class="eyebrow-line"></span>
+        AN INTERACTIVE QUEST
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1>
+        <span class="title-icon">✦</span>
+        Path of the Wise
+        <span class="title-icon">✦</span>
+      </h1>
+
+      <p class="subtitle">
+        A journey of <strong>mind</strong>, <strong>courage</strong> &amp;
+        <strong>humor</strong>
+      </p>
+
+    </header>
+
+    <!-- Quest Progress -->
+    <section class="quest-progress">
+
+      <div class="progress-info">
+        <span id="path-name">The Beginning</span>
+        <span id="progress-text">Ready to begin</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+    </section>
+
+    <!-- Main Story Card -->
+    <section class="story-card">
+
+      <div class="card-decoration top-left">❖</div>
+      <div class="card-decoration top-right">❖</div>
+
+      <div class="story-icon" id="story-icon">
+        🌿
+      </div>
+
+      <div class="story-label" id="story-label">
+        THE QUEST BEGINS
+      </div>
+
+      <div
+        id="story"
+        class="story-text"
+        aria-live="polite"
+      ></div>
+
+      <div id="choices" class="choices"></div>
+
+      <div
+        id="result"
+        class="result"
+        aria-live="polite"
+      ></div>
+
+      <div class="card-decoration bottom-left">❖</div>
+      <div class="card-decoration bottom-right">❖</div>
+
+    </section>
+
+    <!-- Scoreboard -->
+    <section class="scoreboard">
+
+      <div class="score-title">
+        <span>✦</span>
+        YOUR ATTRIBUTES
+        <span>✦</span>
+      </div>
+
+      <div class="stats-grid">
+
+        <div class="stat-card cleverness">
+          <div class="stat-icon">🧠</div>
+          <div class="stat-info">
+            <span>Cleverness</span>
+            <strong id="clever-val">0</strong>
+          </div>
+        </div>
+
+        <div class="stat-card courage">
+          <div class="stat-icon">⚔️</div>
+          <div class="stat-info">
+            <span>Courage</span>
+            <strong id="courage-val">0</strong>
+          </div>
+        </div>
+
+        <div class="stat-card humor">
+          <div class="stat-icon">🎭</div>
+          <div class="stat-info">
+            <span>Humor</span>
+            <strong id="humor-val">0</strong>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="total-score">
+        <div>
+          <span class="total-label">TOTAL WISDOM</span>
+          <small>Your journey shapes your destiny</small>
+        </div>
+
+        <strong id="total-val">0</strong>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="game-footer">
+      <span>✦</span>
+      Every choice shapes your path
+      <span>✦</span>
+    </footer>
+
+  </main>
+
   <script src="script.js"></script>
+
 </body>
 </html>
